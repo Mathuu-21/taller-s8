@@ -128,9 +128,9 @@ int verificarViabilidad(int *tiempos, int *recursosFinancieros, int *demandas, i
 void realizarPedido(char (*nombres)[50], int *demandas, int maxProductos) {
     char nombre[50];
     printf("Ingrese el nombre del producto para realizar un pedido: ");
-    getchar(); // Limpia el buffer
+    getchar();
     fgets(nombre, 50, stdin);
-    nombre[strcspn(nombre, "\n")] = '\0'; // Elimina el salto de línea
+    nombre[strcspn(nombre, "\n")] = '\0';
 
     for (int i = 0; i < maxProductos; i++) {
         if (strcmp(*(nombres + i), nombre) == 0) {
